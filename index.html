@@ -8,51 +8,23 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
-    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="#">Maplibre Observable-Jupyter Choropleth Demo</a>
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading1">First</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading2">Second</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading3">Third</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading4">Fourth</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading5">Fifth</a>
-            </li>
+        <ul class="navbar-nav">
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
+            <li><a href="#section5">Section 5</a></li>
         </ul>
     </nav>
 
 
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
-        tabindex="0">
-
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col">
-
-                    <h1 id="#scrollspyHeading1">Sources</h1>
-                    <p>County Geometry: <a href="https://andrewcarlson.dev/geojson-us-states-and-counties/">
-                            andrewcarlson.dev/geojson-us-states-and-counties</a> </p>
-                    <p>Population Density: <a
-                            href="http://www.usa.com/rank/maine-state--population-density--county-rank.htm">
-                            www.usa.com/rank/maine-state--population-density--county-rank</a></p>
-                    <p>Legend HTML: <a href="https://tilemill-project.github.io/tilemill/docs/guides/advanced-legends/">
-                            tilemill-project.github.io</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container mt-3"">
-            <div class=" row">
+    <div id="section1" class="container mt-3">
+        <div class="row">
             <div class="col">
-                <h1 id="#scrollspyHeading2">Sources</h1>
+                <h1>Sources</h1>
                 <p>County Geometry: <a href="https://andrewcarlson.dev/geojson-us-states-and-counties/">
                         andrewcarlson.dev/geojson-us-states-and-counties</a> </p>
                 <p>Population Density: <a
@@ -64,7 +36,21 @@
         </div>
     </div>
 
-    <div class="container mt-3">
+    <div id="section2" class="container mt-3"">
+        <div class=" row">
+        <div class="col">
+            <h1 id="#scrollspyHeading2">Sources</h1>
+            <p>County Geometry: <a href="https://andrewcarlson.dev/geojson-us-states-and-counties/">
+                    andrewcarlson.dev/geojson-us-states-and-counties</a> </p>
+            <p>Population Density: <a href="http://www.usa.com/rank/maine-state--population-density--county-rank.htm">
+                    www.usa.com/rank/maine-state--population-density--county-rank</a></p>
+            <p>Legend HTML: <a href="https://tilemill-project.github.io/tilemill/docs/guides/advanced-legends/">
+                    tilemill-project.github.io</a></p>
+        </div>
+    </div>
+    </div>
+
+    <div id="section3" class="container mt-3">
         <div class="row">
             <div class="col">
 
@@ -80,7 +66,7 @@
         </div>
     </div>
 
-    <div class="container mt-3">
+    <div id="section4" class="container mt-3">
         <div class="row">
             <div class="col">
 
@@ -96,7 +82,7 @@
         </div>
     </div>
 
-    <div class="container mt-3">
+    <div id="section5" class="container mt-3">
         <div class="row">
             <div class="col">
                 <h1 id="#scrollspyHeading5">Sources</h1>
@@ -118,7 +104,7 @@
             </div>
         </div>
     </div>
-    </div>
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css">
     <script type="module">
