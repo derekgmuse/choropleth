@@ -67,14 +67,10 @@
                         modify existing visualizations from Observable using the Observable-Jupyter library. The
                         following demonstration will include how to set up the computing environment, load in data
                         recognizable by Observable, and embed data and specifications into the map. Throughout the
-                        demonstration, instructions point at cells written in python that can be found within <a
+                        demonstration, instructions point at cells written in Python that can be found within <a
                             href="https://colab.research.google.com/drive/1esKu0C305Ybm8SpEIwFMrOw-fiRegP6m?usp=sharing">this</a>
                         Google
-                        Colab. To follow along with the demonstration, download the US States 20m GeoJSON file found
-                        <a href="https://eric.clst.org/tech/usgeojson/">here</a> and click this
-                        <a
-                            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSw9u-Wqh47R3EMTR_cyOQ3UeI60yq-tvayF53rptw-JWGfqFgmXQ2xLY5ucnooD2VJgMyWfe3pUdsx/pub?gid=1459035980&single=true&output=csv">link</a>
-                        to download the State Temperatures csv file.
+                        Colab.
                     </p>
                 </div>
             </div>
@@ -89,20 +85,21 @@
                         Observable-Jupyter packages. The pandas package will be used for reading in data, while
                         Observable-Jupyter will enable interaction with an Observable notebook.</p>
                     <iframe
-                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=4&hideOutput=true"
+                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=2&hideOutput=true"
                         title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                     <iframe
-                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=5&hideOutput=true"
+                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=3&hideOutput=true"
                         title="Jovian Viewer" height="88" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                 </div>
                 <p>Also, be sure to include the following import statements. The embed function is imported from
                     Observable-Jupyter to include and modify Observable visualizations. The json package is imported
-                    such that data and geographical boundaries can be easily formatted as JSON objects.</p>
+                    such that quantitative data can be formatted as a JSON object. The requests package will be used to
+                    load in the JSON file including boundary information.</p>
                 <iframe
-                    src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=6&hideOutput=true"
-                    title="Jovian Viewer" height="128" width="100%" style="margin 0 auto; max-width: 800px;"
+                    src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=4&hideOutput=true"
+                    title="Jovian Viewer" height="148" width="100%" style="margin 0 auto; max-width: 800px;"
                     frameborder="0" scrolling="auto"></iframe>
             </div>
         </div>
@@ -115,15 +112,15 @@
                         The following two cells provided below demonstrate how to do so. The to_json() function with
                         orient paramter set to "records" converts the pandas data frame to a simple JSON format
                         including column value pairs. The json package is then used to include proper indentation
-                        and return the data in the form of a JSON object. The load() function is only necessary for
-                        boundary information, as it is already provided as a JSON.</p>
+                        and return the data in the form of a JSON object. The get() function is used from requests to
+                        ensure the geographical data maintains its GeoJSON format.</p>
                     <iframe
-                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=7&hideOutput=true"
-                        title="Jovian Viewer" height="168" width="100%" style="margin 0 auto; max-width: 800px;"
+                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=5&hideOutput=true"
+                        title="Jovian Viewer" height="183" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                     <iframe
-                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=8&hideOutput=true"
-                        title="Jovian Viewer" height="108" width="100%" style="margin 0 auto; max-width: 800px;"
+                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=6&hideOutput=true"
+                        title="Jovian Viewer" height="143" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                 </div>
 
@@ -148,10 +145,10 @@
                         data, and "NAME" represents the name of each boundary ("comonality"). Extracting this
                         information is a crucial
                         step, and each string must be entered correctly when entering inputs in the next step.</p>
-                    <iframe src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=11"
+                    <iframe src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=7"
                         title="Jovian Viewer" height="118" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
-                    <iframe src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=10"
+                    <iframe src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=8"
                         title="Jovian Viewer" height="202" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                 </div>
@@ -193,7 +190,7 @@
                         the 7 sections
                         of data</p>
                     <iframe
-                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=12&hideOutput=true"
+                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=9&hideOutput=true"
                         title="Jovian Viewer" height="403" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                     <div id="observablehq-usMap-ffeb07ad"></div>
@@ -203,7 +200,7 @@
                         boundaries are already loaded into the Observable Notebook. The inputs "map_data",
                         "comonality", "center" and "zoom" inputs can be disregarded. </p>
                     <iframe
-                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth/v/16&cellId=15&hideOutput=true"
+                        src="https://jovian.ai/embed?url=https://jovian.ai/derekgmuse/choropleth-1/v/1&cellId=11&hideOutput=true"
                         title="Jovian Viewer" height="303" width="100%" style="margin 0 auto; max-width: 800px;"
                         frameborder="0" scrolling="auto"></iframe>
                     <div id="observablehq-map-e9022220"></div>
